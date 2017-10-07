@@ -73,6 +73,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.gradle/
 .idea/
 build/
 gradle/
