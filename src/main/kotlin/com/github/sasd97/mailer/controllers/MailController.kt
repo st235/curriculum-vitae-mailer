@@ -25,9 +25,10 @@ class MailController(val emailValidator: EmailValidator,
         try {
             val message = SimpleMailMessage()
             message.setTo("st235@yandex.ru")
-            message.text = email.body
+            message.from = "st235.cv.mailer@yandex.ru"
+
             message.subject = email.subject
-            message.from = email.from
+            message.text = "from ${email.from}\n${email.body}"
             mailSender.send(message)
         } catch (exception: Exception) {
             exception.printStackTrace()
