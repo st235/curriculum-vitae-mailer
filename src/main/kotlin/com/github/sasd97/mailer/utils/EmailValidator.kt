@@ -13,7 +13,6 @@ class EmailValidator {
     }
 
     fun validate(hex: String): Boolean {
-
         val matcher = pattern.matcher(hex)
         return matcher.matches()
     }
